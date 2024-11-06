@@ -1,0 +1,30 @@
+name: Build and Run .NET Core 3.1 Project
+
+on:
+  push:
+    branches:
+      - main  # Trigger this on push to the 'main' branch
+  pull_request:
+    branches:
+      - main  # Trigger this on PR creation or updates
+
+jobs:
+  build:
+    runs-on: windows-latest  # GitHub-hosted Windows runner
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4  # Checks out the repository code
+
+    - name: Set up .NET Core 3.1
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '3.1.x'  # Install .NET Core 3.1 SDK
+
+    - name: Build the project
+      run: |
+        dotnet build ./HelloWorldApp/HelloWorldApp.csproj  # Adjust path to your project
+
+    - name: Run the application
+      run: |
+        dotnet run --project ./HelloWorldApp/HelloWorldApp.csproj  # Runs the Hello World app
