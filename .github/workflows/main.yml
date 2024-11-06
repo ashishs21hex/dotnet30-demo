@@ -23,8 +23,8 @@ jobs:
 
     - name: Build the project
       run: |
-        dotnet build ./HelloWorldApp/HelloWorldApp.csproj  # Adjust path to your project
+        dotnet build ./.github/HelloWorldApp/HelloWorldApp.csproj  # Correct path to .csproj in the HelloWorldApp folder
 
     - name: Run the application
       run: |
-        dotnet run --project ./HelloWorldApp/HelloWorldApp.csproj  # Runs the Hello World app
+        dotnet run --project ./.github/HelloWorldApp/HelloWorldApp.csproj  # Runs the Hello World app
