@@ -21,6 +21,9 @@ jobs:
       with:
         dotnet-version: '3.1.x'  # Install .NET Core 3.1 SDK
 
+    - name: print the version
+      run: dotnet --version
+
     - name: Build the project
       run: |
         dotnet build ./.github/HelloWorldApp/HelloWorldApp.csproj  # Correct path to .csproj in the HelloWorldApp folder
