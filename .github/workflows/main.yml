@@ -22,7 +22,7 @@ jobs:
         dotnet-version: '3.1.x'  # Install .NET Core 3.1 SDK
 
     - name : set glotbally 3.1
-      run: dotnet new globaljson --sdk-version 6.0.427 --roll-forward disable
+      run: dotnet new globaljson --sdk-version 3.1 --roll-forward disable
 
     - name: print the version
       run: dotnet --version
