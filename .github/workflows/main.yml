@@ -21,6 +21,9 @@ jobs:
       with:
         dotnet-version: '3.1.x'  # Install .NET Core 3.1 SDK
 
+    - name : set glotbally 3.1
+      run: dotnet new globaljson --sdk-version 3.1.426
+
     - name: print the version
       run: dotnet --version
 
@@ -29,5 +32,6 @@ jobs:
         dotnet build ./.github/HelloWorldApp/HelloWorldApp.csproj  # Correct path to .csproj in the HelloWorldApp folder
 
     - name: Run the application
-      run: |
+      run: dotnet run ./.github/HelloWorldApp/HelloWorldApp.csproj
         dotnet run --project ./.github/HelloWorldApp/HelloWorldApp.csproj  # Runs the Hello World app
+dotnet
