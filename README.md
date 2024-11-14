@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/HexaDeliveryBootstrapFramework/JiraMigrationInventoryFetch">
-    <img src="images/tfs-logo.PNG" alt="Logo" width="370" height="197">
+    <img src="images/HexawareJiraMigrationBootstrapKitLogo.png" alt="Logo" width="370" height="197">
   </a>
 
   <h3 align="center">Hexaware's TFS Migration Bootstrap Kit </h3>
